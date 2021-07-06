@@ -1,12 +1,9 @@
-## Author: David Cedar(2017)
-import json
 import hashlib
 from time import gmtime, strftime
 
-# Version 1.2
 
-########  Product Class   ########
-class Product:
+# Amazon Product Class
+class AmazonProduct:
     title = "e"
     brand = "e"
     url = "e"
@@ -67,7 +64,7 @@ class Product:
             return True
 
     def ReturnJson(self):
-        #Reutnrs Object infomation in form of a Json array
+        # Returns Object infomation in form of a Json array
         m = hashlib.md5()
         m.update(self.source_id)
         product = {
